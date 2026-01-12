@@ -561,6 +561,7 @@ class Controller(QObject):
         self.ui_update.emit(result)
         self._lock_names = True
         self.status_update.emit("닉네임 확정 완료")
+        self.schedule_color_read()
 
     def schedule_color_read(self):
         # 딜레이 후 색상 인식(1회)
